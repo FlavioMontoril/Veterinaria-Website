@@ -1,46 +1,55 @@
+// Initialize Lucide icons
 lucide.createIcons();
 
-document.getElementById("year").textContent = new Date().getFullYear();
+// Set current year in footer
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
+/**
+ * Mobile Menu Toggle
+ */
 function toggleMenu() {
   const menu = document.getElementById("mobile-menu");
   const iconMenu = document.getElementById("icon-menu");
   const closeMenu = document.getElementById("icon-close");
 
-  menu.classList.toggle("hidden");
-  iconMenu.classList.toggle("hidden");
-  closeMenu.classList.toggle("hidden");
+  if (menu && iconMenu && closeMenu) {
+    menu.classList.toggle("hidden");
+    iconMenu.classList.toggle("hidden");
+    closeMenu.classList.toggle("hidden");
+  }
 }
 
-// Carousel
-lucide.createIcons();
-
-// ... (sua função toggleMenu permanece igual)
-
+/**
+ * Hero Carousel
+ */
 let currentHero = 0;
 const heroSlides = document.querySelectorAll(".slide");
-// Seleciona as div filhas dentro do container de dots
 const heroDots = document.querySelectorAll("#hero-dots .dot");
 
 function updateHero(index) {
-  heroSlides.forEach((s, i) => {
+  if (heroSlides.length === 0) return;
+
+  heroSlides.forEach((slide, i) => {
     if (i === index) {
-      s.classList.replace("opacity-0", "opacity-100");
-      s.style.zIndex = "20"; // Traz o slide ativo para frente
+      slide.classList.add("opacity-100", "z-20");
+      slide.classList.remove("opacity-0", "z-10");
     } else {
-      s.classList.replace("opacity-100", "opacity-0");
-      s.style.zIndex = "10";
+      slide.classList.add("opacity-0", "z-10");
+      slide.classList.remove("opacity-100", "z-20");
     }
   });
 
-  // Atualiza os dots
-  heroDots.forEach((d, i) => {
+  // Update dots
+  heroDots.forEach((dot, i) => {
     if (i === index) {
-      d.classList.add("bg-white", "w-4"); // Bolinha ativa fica branca e maior
-      d.classList.remove("bg-white/50");
+      dot.classList.add("bg-white", "w-4");
+      dot.classList.remove("bg-white/50");
     } else {
-      d.classList.remove("bg-white", "w-4");
-      d.classList.add("bg-white/50");
+      dot.classList.remove("bg-white", "w-4");
+      dot.classList.add("bg-white/50");
     }
   });
 }
@@ -55,8 +64,8 @@ function prevHero() {
   updateHero(currentHero);
 }
 
-// Inicializa o primeiro estado
-updateHero(0);
-
-// Auto-play
-setInterval(nextHero, 5000);
+// Initial state and Auto-play
+if (heroSlides.length > 0) {
+  updateHero(0);
+  setInterval(nextHero, 6000);
+}
