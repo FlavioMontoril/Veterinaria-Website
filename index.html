@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Raquel Almeida | Especialista em Suinocultura</title>
+    <link rel="icon" type="image/png" href="public/pig-breeding-modern-farm.jpg" />
+    <link href="./dist/global.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Medicina veterinária especializada em
+       suinocultura e reprodução de suínos."
+    />
+    <!-- Tailwind CSS CDN
+    <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="font-sans antialiased text-slate-900 bg-white">
+    <header
+      class="sticky top-0 z-50 w-full md:border-slate-300 md:border-b bg-white/60 backdrop-blur supports-backdrop-filter:bg-background/60"
+    >
+      <nav class="flex justify-between px-5 h-16 items-center">
+        <div class="flex items-center gap-2">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="public/veterinarian-vaccinating-pig.jpg"
+            alt="Dra. A Raquel"
+          />
+          <div class="flex flex-col">
+            <span class="text-sm font-semibold leading-tight"
+              >Dra. Médica Veterinária</span
+            >
+            <span class="text-sm font-semibold text-gray-500"
+              >Suinocultura</span
+            >
+          </div>
+        </div>
+
+        <!-- BOTÃO -->
+        <div class="hidden items-center gap-6 md:flex cursor-pointer">
+          <a
+            href="#sobre"
+            class="text-sm font-medium text-gray-600 hover:text-verde-especializado transition-colors transition-transform hover:scale-105"
+            >Sobre</a
+          >
+          <a
+            href="#servicos"
+            class="text-sm font-medium text-gray-600 hover:text-verde-especializado transition-colors transition-transform hover:scale-105"
+            >Serviços</a
+          >
+          <a
+            href="#dicas"
+            class="text-sm font-medium text-gray-600 hover:text-verde-especializado transition-colors transition-transform hover:scale-105"
+            >Dicas</a
+          >
+          <div
+            class="flex bg-verde-especializado rounded-lg w-18 h-8 items-center justify-center"
+          >
+            <a
+              href="#contato"
+              class="text-sm font-medium text-white transition-colors transition-transform hover:scale-105"
+              >Contato</a
+            >
+          </div>
+        </div>
+
+        <!-- {/* Mobile Menu Button */} -->
+        <button onclick="toggleMenu()" id="menu-button" class="md:hidden">
+          <!-- Ícone MENU -->
+          <i id="icon-menu" data-lucide="menu" class="text-slate-500"></i>
+          <!-- Ícone CLOSE -->
+          <i id="icon-close" data-lucide="x" class="hidden"></i>
+        </button>
+
+        <!-- MENU MOBILE -->
+      </nav>
+      <div
+        id="mobile-menu"
+        class="container px-4 py-4 hidden flex font-semibold flex-col border-t shadow shadow-2xs border-slate-300 bg-white p-4 gap-4 md:hidden"
+      >
+        <div
+          class="flex items-center px-4 hover:bg-verde-especializado/70 text-emerald-700 hover:text-white rounded-lg h-8"
+        >
+          <a href="#sobre">Sobre</a>
+        </div>
+        <div
+          class="flex items-center px-4 hover:bg-verde-especializado/70 text-emerald-700 hover:text-white rounded-lg h-8"
+        >
+          <a href="#servicos">Serviços</a>
+        </div>
+        <div
+          class="flex items-center px-4 hover:bg-verde-especializado/70 text-emerald-700 hover:text-white rounded-lg h-8"
+        >
+          <a href="#dicas">Dicas</a>
+        </div>
+        <div
+          class="flex items-center px-4 bg-verde-especializado/70 text-white rounded-lg h-8"
+        >
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- CAROUSEL CONTAINER -->
+      <section
+        class="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-slate-900"
+      >
+        <!-- SLIDE 1 -->
+        <div
+          class="slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10"
+        >
+          <div class="absolute inset-0 bg-verde-especializado/50 z-20"></div>
+          <img
+            class="w-full h-full object-cover"
+            src="public/veterinarian-examining-pig-farm.jpg"
+            alt="Exame"
+          />
+          <div
+            class="absolute inset-0 flex items-center z-30 container mx-auto px-6"
+          >
+            <div class="max-w-2xl text-white space-y-4">
+              <h1 class="text-4xl md:text-6xl font-bold">
+                Especialista em Suinocultura
+              </h1>
+              <p class="text-lg md:text-xl">
+                Cuidados profissionais para a saúde e reprodução de suínos.
+              </p>
+              <a
+                href="#contato"
+                class="inline-block bg-white hover:bg-verde-especializado border text-verde-especializado hover:text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-white transition-colors"
+                >Agende uma Consulta</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 (Note que ele é IRMÃO do slide 1 agora) -->
+        <div
+          class="slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-10"
+        >
+          <div class="absolute inset-0 bg-verde-especializado/50 z-20"></div>
+          <img
+            class="w-full h-full object-cover"
+            src="public/pig-breeding-modern-farm.jpg"
+            alt="Reprodução"
+          />
+          <div
+            class="absolute inset-0 flex items-center z-30 container mx-auto px-6"
+          >
+            <div class="max-w-2xl text-white space-y-4">
+              <h1 class="text-4xl md:text-6xl font-bold">
+                Reprodução de Suínos
+              </h1>
+              <p class="text-lg md:text-xl">
+                Técnicas avançadas para maximizar a produtividade.
+              </p>
+              <a
+                href="#contato"
+                class="inline-block bg-white hover:bg-verde-especializado border text-verde-especializado hover:text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-white transition-colors"
+                >Agende uma Consulta</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões de Navegação (Z-40 para ficar acima dos slides) -->
+        <button
+          onclick="prevHero()"
+          class="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/20 rounded-full backdrop-blur-sm text-white hover:bg-white/30"
+        >
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button
+          onclick="nextHero()"
+          class="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/20 rounded-full backdrop-blur-sm text-white hover:bg-white/30"
+        >
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <!-- Hero Dots -->
+        <div
+          id="hero-dots"
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex gap-2"
+        >
+          <!-- Gerados ou controlados via JS -->
+          <div
+            class="dot h-2 w-2 rounded-full bg-white/50 transition-all"
+          ></div>
+          <div
+            class="dot h-2 w-2 rounded-full bg-white/50 transition-all"
+          ></div>
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section
+        id="sobre"
+        class="py-20 px-4 flex justify-center overflow-hidden min-h-screen bg-slate-100"
+      >
+        <div class="container text-center">
+          <h2 class="text-xl md:text-4xl font-bold mb-2 md:mb-4">
+            Excelência em Medicina Veterinária de Suinos
+          </h2>
+          <div class="flex min-w-full">
+            <p
+              class="text-center text-sm md:text-lg text-slate-500 mx-auto mb-12 font-semibold md:mb-35"
+            >
+              Dedicação e expertise em promover a saúde e o bem-estar dos
+              suínos, contribuindo para o sucesso da sua produção
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="p-6">
+              <div
+                class="w-16 h-16 bg-verde-especializado/40 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600 mb-10"
+              >
+                <i data-lucide="award" class="w-8 h-8"></i>
+              </div>
+              <h3 class="font-bold text-xl mb-2">Especialização</h3>
+              <p class="text-slate-600 text-sm">
+                Formação avançada em suinocultura e técnicas modernas.
+              </p>
+            </div>
+            <div class="p-6">
+              <div
+                class="w-16 h-16 bg-verde-especializado/40 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600 mb-10"
+              >
+                <i data-lucide="stethoscope" class="w-8 h-8"></i>
+              </div>
+              <h3 class="font-bold text-xl mb-2">Atendimento</h3>
+              <p class="text-slate-600 text-sm">
+                Cuidados personalizados e acompanhamento contínuo.
+              </p>
+            </div>
+            <div class="p-6">
+              <div
+                class="w-16 h-16 bg-verde-especializado/40 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600 mb-10"
+              >
+                <i data-lucide="users" class="w-8 h-8"></i>
+              </div>
+              <h3 class="font-bold text-xl mb-2">Parceria</h3>
+              <p class="text-slate-600 text-sm">
+                Trabalho colaborativo para otimizar resultados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS-->
+      <section
+        id="servicos"
+        class="flex justify-center min-h-screen bg-pastel-claro/30 px-4"
+      >
+        <div class="container py-20">
+          <h1 class="text-3xl text-center font-bold">
+            Serviços Especializados
+          </h1>
+          <p
+            class="py-5 mb-20 text-center text-slate-500 font-semibold text-pretty"
+          >
+            Soluções completas em medicina veterinária para a suinocultura
+            moderna
+          </p>
+          <div
+            class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-2 md:mx-16 lg:mx-28"
+          >
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="heart"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Reprodução de Suínos
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Inseminação artificial, manejo reprodutivo e acompanhamento de
+                matrizes e reprodutores.
+              </h2>
+            </div>
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="activity"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Medicina Preventiva
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Programas de vacinação, protocolos sanitários e prevenção de
+                doenças.
+              </h2>
+            </div>
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="microscope"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Diagnóstico Laboratorial
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Análises clínicas, exames parasitológicos e diagnóstico de
+                enfermidades.
+              </h2>
+            </div>
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="syringe"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Tratamentos Clínicos
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Atendimento veterinário para doenças e acompanhamento
+                terapêutico.
+              </h2>
+            </div>
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="shield"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Biossegurança
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Implementação de medidas de biossegurança e controle sanitário.
+              </h2>
+            </div>
+            <div
+              class="p-6 flex flex-col bg-white border border-slate-300 rounded-2xl"
+            >
+              <div
+                class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600 mb-10"
+              >
+                <i data-lucide="clipboardList"></i>
+              </div>
+              <h1 class="flex text-xl font-bold tracking-tighter mb-3">
+                Consultoria Técnica
+              </h1>
+              <h2 class="flex text-md font-medium text-gray-500">
+                Assessoria em manejo, nutrição, instalações e gestão da granja.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DICAS -->
+      <section
+        id="dicas"
+        class="flex justify-center min-h-screen bg-slate-100 px-4"
+      >
+        <div class="container py-20">
+          <h1 class="text-3xl font-bold text-center">
+            Dicas de Cuidados com Suínos
+          </h1>
+          <h2
+            class="py-5 mb-20 text-center text-slate-500 font-semibold text-pretty"
+          >
+            Orientações práticas para manter a saúde e o bem-estar do seu
+            plantel
+          </h2>
+          <div id="tips-container" class="grid md:grid-cols-3 gap-8">
+            <!-- Os itens de dicas seriam gerados aqui. Para HTML puro,
+       listamos os 3 principais -->
+            <div
+              class="rounded-xl border border-slate-200 overflow-hidden group"
+            >
+              <img
+                src="public/pig-feeding-nutritious-diet.jpg"
+                class="h-48 w-full object-cover group-hover:scale-105 transition-transform"
+              />
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Manejo Nutricional</h3>
+                <p class="text-md font-medium text-gray-500">
+                  alimentação adequada é fundamental para o crescimento
+                  saudável. Utilize rações balanceadas e água limpa sempre
+                  disponível.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl border border-slate-200 overflow-hidden group"
+            >
+              <img
+                src="public/modern-pig-barn-clean-facilities.jpg"
+                class="h-48 w-full object-cover group-hover:scale-105 transition-transform"
+              />
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Instalações Adequadas</h3>
+                <p class="text-md font-medium text-gray-500">
+                  Ambiente limpo, ventilado e com temperatura controlada reduz o
+                  estresse e previne doenças.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl border border-slate-200 overflow-hidden group"
+            >
+              <img
+                src="public/veterinarian-vaccinating-pig.jpg"
+                class="h-48 w-full object-cover group-hover:scale-105 transition-transform"
+              />
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Vacinação Regular</h3>
+                <p class="text-md font-medium text-gray-500">
+                  Mantenha o calendário de vacinação em dia para proteger seu
+                  plantel contra doenças comuns.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="rounded-xl border border-slate-200 overflow-hidden group"
+            >
+              <img
+                src="public/biosecurity-measures-pig-farm.jpg"
+                class="h-48 w-full object-cover group-hover:scale-105 transition-transform"
+              />
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Biossegurança</h3>
+                <p class="text-md font-medium text-gray-500">
+                  Implemente protocolos de higiene rigorosos para evitar a
+                  entrada de patógenos na granja.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="rounded-xl border border-slate-200 overflow-hidden group"
+            >
+              <img
+                src="public/pig-breeding-reproductive-health.jpg"
+                class="h-48 w-full object-cover group-hover:scale-105 transition-transform"
+              />
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">
+                  Monitoramento Reprodutivo
+                </h3>
+                <p class="text-md font-medium text-gray-500">
+                  Acompanhe o ciclo reprodutivo das matrizes e realize exames
+                  periódicos nos reprodutores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section
+        id="contato"
+        class="flex justify-center min-h-screen bg-pastel-claro/30 px-4 border-pastel-claro border-b"
+      >
+        <div class="container py-20">
+          <div class="text-center">
+            <h1 class="text-3xl font-bold">Entre em Contato</h1>
+            <p class="py-5 text-slate-500 font-semibold">
+              Agende uma consulta ou tire suas dúvidas sobre saúde e reprodução
+              de suínos.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 mt-20">
+            <form action="#" class="space-y-4 w-auto">
+              <div class="border border-slate-200 rounded-lg bg-white p-6">
+                <h1 class="font-bold text-lg">Envie uma mensagem</h1>
+                <p class="text-slate-500 font-semibold text-sm">
+                  Preencha o formulário e retornaremos em breve
+                </p>
+
+                <div class="space-y-2 mt-5">
+                  <label
+                    for="nome"
+                    class="block font-bold text-md tracking-tighter mb-1"
+                  >
+                    Nome completo
+                  </label>
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    placeholder="Seu nome"
+                    class="border border-slate-300 rounded-lg w-full h-8 outline-verde-especializado/50 placeholder:p-2"
+                  />
+                  <label
+                    for="email"
+                    class="block font-bold text-md tracking-tighter mb-1"
+                  >
+                    E-mail
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="seu@email.com"
+                    class="border border-slate-300 rounded-lg w-full h-8 outline-verde-especializado/50 placeholder:p-2"
+                  />
+                  <label
+                    for="telefone"
+                    class="block font-bold text-md tracking-tighter mb-1"
+                  >
+                    Telefone
+                  </label>
+                  <input
+                    id="telefone"
+                    name="telefone"
+                    type="tel"
+                    placeholder="(00)00000-0000"
+                    class="border border-slate-300 rounded-lg w-full h-8 outline-verde-especializado/50 placeholder:p-2"
+                  />
+
+                  <label
+                    for="mensagem"
+                    class="block font-bold text-md tracking-tighter mb-1"
+                  >
+                    Mensagem
+                  </label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Como posso ajudar você hoje?"
+                    rows="4"
+                    class="border border-slate-300 rounded-lg w-full outline-verde-especializado/50 placeholder:p-2"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="w-full bg-verde-especializado text-white py-3 rounded-md font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                  >
+                    Enviar Mensagem
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="flex flex-col gap-8">
+              <!-- CARD 1 -->
+              <div class="flex-1">
+                <div
+                  class="h-full flex items-center border border-slate-200 rounded-lg bg-white p-6 gap-2"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600"
+                  >
+                    <i data-lucide="phone"></i>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1 class="font-bold text-md tracking-tighte">Telefone</h1>
+                    <p class="flex text-md font-medium text-gray-500">
+                      (00)00000-0000
+                    </p>
+
+                    <p class="flex text-sm font-medium text-gray-500">
+                      Seg a Sex, 8h às 18h
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD 2 -->
+              <div class="flex-1">
+                <div
+                  class="h-full flex items-center border border-slate-200 rounded-lg bg-white p-6 gap-4"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600"
+                  >
+                    <i data-lucide="mail"></i>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1 class="font-bold text-md tracking-tighte">E-mail</h1>
+                    <p class="flex text-md font-medium text-gray-500">
+                      contato@veterinariasuinos.com.br
+                    </p>
+                    <p class="flex text-md font-medium text-gray-500">
+                      Resposta em até 24h
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="flex-1">
+                <div
+                  class="h-full flex items-center border border-slate-200 rounded-lg bg-white p-6 gap-4"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-lg h-12 w-12 bg-verde-especializado/20 text-emerald-600"
+                  >
+                    <i data-lucide="map"></i>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1 class="font-bold text-md tracking-tighte">
+                      Localização
+                    </h1>
+                    <p class="flex text-md font-medium text-gray-500">
+                      Atendimento em granjas e propriedades rurais
+                    </p>
+                    <p class="flex text-md font-medium text-gray-500">
+                      Cobertura regional
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <section class="bg-slate-100 px-4">
+        <div class="container py-20 mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-4 ml-0 md:ml-32 gap-10">
+            <!-- NOME -->
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-2">
+                <div
+                  class="flex justify-center items-center w-12 h-12 rounded-full bg-verde-especializado"
+                >
+                  <h1 class="text-white font-bold text-lg">DV</h1>
+                </div>
+                <div class="flex flex-col">
+                  <h1 class="font-bold text-lg tracking-tighter">
+                    Dra. Médica Veterinária
+                  </h1>
+                  <p class="text-xs font-medium text-gray-500">Suinocultura</p>
+                </div>
+              </div>
+              <p class="text-sm font-medium text-gray-500">
+                Medicina veterinária especializada em suinocultura e reprodução
+              </p>
+            </div>
+
+            <!-- SERVICOS -->
+            <div class="flex flex-col gap-3">
+              <h1 class="font-bold text-lg tracking-tighter">Serviços</h1>
+              <p class="text-sm font-medium text-gray-500">Reprodução</p>
+              <p class="text-sm font-medium text-gray-500">
+                Medicina Preventiva
+              </p>
+              <p class="text-sm font-medium text-gray-500">Diagnóstico</p>
+              <p class="text-sm font-medium text-gray-500">Consultoria</p>
+            </div>
+
+            <!-- CONTATO -->
+            <div class="flex flex-col gap-3">
+              <h1 class="font-bold text-md tracking-tighte">Telefone</h1>
+              <p class="flex text-md font-medium text-gray-500">
+                (00)00000-0000
+              </p>
+
+              <p class="flex text-sm font-medium text-gray-500">
+                contato@veterinariasuinos.com.br
+              </p>
+
+              <p class="flex text-sm font-medium text-gray-500">
+                Seg a Sex, 8h às 18h
+              </p>
+            </div>
+
+            <!-- REDES SOCIAIS -->
+            <div class="flex flex-col gap-3">
+              <h1 class="font-bold text-md tracking-tighte">Redes Sociais</h1>
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="flex justify-center items-center w-8 h-8 rounded-full bg-slate-300/60 hover:bg-verde-especializado/80"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="flex justify-center items-center w-8 h-8 rounded-full bg-slate-300/60 hover:bg-verde-especializado/80"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="flex justify-center items-center w-8 h-8 rounded-full bg-slate-300/60 hover:bg-verde-especializado/80"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-8 border-slate-300 border-t border-border pt-10 text-center text-sm text-slate-500"
+          >
+            <p>
+              © <span id="year"></span>
+              Dra. Médica Veterinária Suinocultura. Todos os direitos
+              reservados.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./src/menu-mobile.js"></script>
+  </body>
+</html>

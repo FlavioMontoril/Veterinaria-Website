@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "@tailwindcss/postcss": "^4.2.4",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.2.4"
+  }
+}

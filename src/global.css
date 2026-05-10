@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+    /* Grupo Pastel */
+    --color-pastel-marrom-escuro: #8A5F41;
+    --color-pastel-marrom-medio: #A77F60;
+    --color-pastel-claro: #F3E4C9;
+    --color-pastel-esverdiado: #CCD67F;
+
+    --color-azul-profissional: #3b82f6;
+    --color-verde-especializado: #10b981;
+
+    --color-hunt-header: #F3E4C9;
+
+    /* Define a Animação */
+    --animate-marquee: marquee 30s linear infinite;
+
+}
+
+/* Os Keyframes devem ficar FORA do bloco @theme na v4 ou declarados de forma pura */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
