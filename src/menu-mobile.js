@@ -69,3 +69,23 @@ if (heroSlides.length > 0) {
   updateHero(0);
   setInterval(nextHero, 6000);
 }
+
+// Esconder e mostra o header ao scrollar
+const header = document.querySelector('header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  // Se o scroll atual for maior que o anterior, estamos descendo
+  if (currentScrollY > lastScrollY && currentScrollY > 200) {
+    // Descendo: Esconde o header
+    // Adicionamos -translate-y-full (sobe o header) e opacity-0
+    header.classList.add('-translate-y-[150%]', 'opacity-0');
+  } else {
+    // Subindo: Mostra o header
+    header.classList.remove('-translate-y-[150%]', 'opacity-0');
+  }
+
+  lastScrollY = currentScrollY;
+});
